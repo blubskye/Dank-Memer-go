@@ -1,0 +1,44 @@
+# Dank Memer Bot Configuration
+# Copy this file to config.yaml and fill in your values
+
+token: "YOUR_DISCORD_BOT_TOKEN"
+default_prefix: "pls"
+version: "1.0.0"
+devs:
+  - "YOUR_USER_ID"
+premium: false
+premium_guilds: []
+vent_channel: ""
+
+database:
+  host: "localhost"
+  port: 3306
+  user: "memer"
+  password: "YOUR_DATABASE_PASSWORD"
+  name: "dankmemer"
+  max_conns: 25
+
+sharding:
+  enabled: false
+  shard_count: 1
+
+apis:
+  imgen_key: ""
+  imgen_url: "https://dankmemer.lol/api"
+  reddit_url: "https://www.reddit.com"
+
+webhooks:
+  shard:
+    id: ""
+    token: ""
+  cluster:
+    id: ""
+    token: ""
+
+voice:
+  audio_path: "./assets/audio"
+
+urls:
+  invite: "https://discord.com/oauth2/authorize"
+  support: "https://discord.gg/dank"
+  patreon: "https://patreon.com/dank"
