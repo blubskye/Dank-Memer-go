@@ -1,0 +1,40 @@
+token: ""
+default_prefix: "pls"
+version: "1.0.0"
+devs:
+  - "172571295077105664"
+premium: false
+premium_guilds: []
+
+database:
+  host: "localhost"
+  port: 3306
+  user: "memer"
+  password: ""
+  name: "dankmemer"
+  max_conns: 25
+
+sharding:
+  enabled: false
+  shard_count: 1
+
+apis:
+  imgen_key: ""
+  imgen_url: "https://dankmemer.lol/api"
+  reddit_url: "https://www.reddit.com"
+
+webhooks:
+  shard:
+    id: ""
+    token: ""
+  cluster:
+    id: ""
+    token: ""
+
+voice:
+  audio_path: "./assets/audio"
+
+urls:
+  invite: "https://discord.com/oauth2/authorize"
+  support: "https://discord.gg/dank"
+  patreon: "https://patreon.com/dank"
