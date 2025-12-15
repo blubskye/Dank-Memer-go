@@ -20,6 +20,7 @@ import (
 	"fmt"
 	"math/rand"
 	"path/filepath"
+	"strconv"
 
 	"github.com/bwmarrin/discordgo"
 )
@@ -100,7 +101,7 @@ func (c *VoiceCommand) Run(ctx *CommandContext) (*CommandResponse, error) {
 		filename = c.SingleFile
 	} else {
 		fileNum := rand.Intn(c.FileCount) + 1
-		filename = fmt.Sprintf("%d", fileNum)
+		filename = strconv.Itoa(fileNum)
 	}
 
 	ext := c.Extension

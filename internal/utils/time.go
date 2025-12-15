@@ -18,6 +18,7 @@ package utils
 
 import (
 	"fmt"
+	"strings"
 	"time"
 )
 
@@ -69,18 +70,20 @@ func FormatDuration(ms int64) string {
 	}
 
 	// Join all but last with ", " and last with " and "
-	result := ""
+	var result strings.Builder
 	for i, part := range parts {
 		if i == 0 {
-			result = part
+			result.WriteString(part)
 		} else if i == len(parts)-1 {
-			result += " and " + part
+			result.WriteString(" and ")
+			result.WriteString(part)
 		} else {
-			result += ", " + part
+			result.WriteString(", ")
+			result.WriteString(part)
 		}
 	}
 
-	return result
+	return result.String()
 }
 
 // FormatDurationShort formats a duration in milliseconds to a short string (e.g., "5m 30s")

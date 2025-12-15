@@ -139,7 +139,7 @@ func (db *Database) EnableCommands(guildID string, commands []string) error {
 	}
 
 	// Remove commands from disabled list
-	var newDisabled []string
+	newDisabled := make([]string, 0, len(cfg.DisabledCommands))
 	for _, existing := range cfg.DisabledCommands {
 		shouldKeep := true
 		for _, cmd := range commands {
@@ -151,10 +151,6 @@ func (db *Database) EnableCommands(guildID string, commands []string) error {
 		if shouldKeep {
 			newDisabled = append(newDisabled, existing)
 		}
-	}
-
-	if newDisabled == nil {
-		newDisabled = []string{}
 	}
 
 	return db.UpdateGuildDisabledCommands(guildID, newDisabled)

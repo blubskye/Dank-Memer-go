@@ -19,6 +19,7 @@ package utility
 import (
 	"fmt"
 	"runtime"
+	"strconv"
 	"time"
 
 	"github.com/bwmarrin/discordgo"
@@ -127,7 +128,7 @@ func formatNumber(n int) string {
 	if n >= 1000 {
 		return fmt.Sprintf("%.1fK", float64(n)/1000)
 	}
-	return fmt.Sprintf("%d", n)
+	return strconv.Itoa(n)
 }
 
 func formatDuration(d time.Duration) string {

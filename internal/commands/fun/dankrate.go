@@ -49,13 +49,7 @@ func init() {
 			}
 
 			rating := rand.Intn(100) + 1
-			reactionIdx := rating / 10
-			if reactionIdx > 9 {
-				reactionIdx = 9
-			}
-			if reactionIdx < 0 {
-				reactionIdx = 0
-			}
+			reactionIdx := min(max(rating/10, 0), 9)
 
 			embed := &discordgo.MessageEmbed{
 				Title:       "dank r8 machine",

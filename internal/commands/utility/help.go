@@ -62,14 +62,14 @@ func init() {
 				}
 
 				// Sort categories
-				var catNames []string
+				catNames := make([]string, 0, len(categories))
 				for name := range categories {
 					catNames = append(catNames, name)
 				}
 				sort.Strings(catNames)
 
 				// Build fields
-				var fields []*discordgo.MessageEmbedField
+				fields := make([]*discordgo.MessageEmbedField, 0, len(catNames))
 				for _, catName := range catNames {
 					cmds := categories[catName]
 					sort.Strings(cmds)
