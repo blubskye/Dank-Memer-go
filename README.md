@@ -271,14 +271,40 @@ func init() {
 
 This project is licensed under the **GNU Affero General Public License v3.0 (AGPL-3.0)**.
 
-This means:
-- You can view, modify, and redistribute this source code
-- If you run a modified version of this software as a network service, you must make the source code available to users
-- Any modifications must be released under the same license
-- You must give appropriate credit to the original authors
+### What This Means For You
+
+The AGPL-3.0 is a **copyleft license** that ensures this software remains free and open. Here's what you need to know:
+
+#### ✅ You CAN:
+- **Use** this bot for any purpose (personal, commercial, whatever)
+- **Modify** the code to your heart's content
+- **Distribute** copies to others
+- **Run** it as a network service (like a public Discord bot)
+
+#### 📋 You MUST:
+- **Keep it open source** - If you modify and distribute this code, your version must also be AGPL-3.0
+- **Provide source access** - Users of your modified bot must be able to get the source code
+- **State changes** - Document what you've modified from the original
+- **Include license** - Keep the LICENSE file and copyright notices intact
+- **Give credit** - Acknowledge the original authors
+
+#### 🌐 The Network Clause (This is the important part!):
+Unlike regular GPL, **AGPL has a network provision**. This means:
+- If you run a **modified version** of this bot as a public service (like hosting it for others to use on Discord)
+- You **MUST** make your complete source code available to users
+- The `pls source` command in this bot helps satisfy this requirement!
+
+#### ❌ You CANNOT:
+- 🚫 Make it closed source
+- 🚫 Remove the license or copyright notices
+- 🚫 Use a different license for modified versions
+- 🚫 Hide your modifications if you run it as a public service
+
+#### 💡 In Simple Terms:
+> If you use this code to create something, you must share it with everyone too. That's only fair, right?
+
+This ensures that improvements to the bot benefit the entire community, not just one person.
 
 See the [LICENSE](LICENSE) file for the full license text, or visit https://www.gnu.org/licenses/agpl-3.0.html
 
-### Source Code Command
-
-This bot includes a `source` command (`pls source`) that provides a link to the source code, ensuring compliance with AGPL-3.0 requirements for network services.
+**Source Code:** https://github.com/blubskye/Dank-Memer-go
